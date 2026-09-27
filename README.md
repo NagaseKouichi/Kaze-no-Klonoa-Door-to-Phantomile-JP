@@ -12,7 +12,7 @@
 </p>
 <!-- /retcomm-readme-boxart -->
 
-Static recompilation of **Klonoa - Door to Phantomile** built on
+Static recompilation of **Kaze no Klonoa: Door to Phantomile (Japan, Rev 1)** built on
 [psxrecomp](https://github.com/mstan/psxrecomp) and
 [recomp-ui](https://github.com/mstan/recomp-ui).
 
@@ -21,7 +21,7 @@ Klonoa: Door to Phantomile is a side-scrolling platform game viewed from a "2.5D
 | | |
 |---|---|
 | Players | 1 |
-| Region | USA |
+| Region | Japan (Rev 1) |
 | Publisher | Namco |
 | Year | 1997 |
 
@@ -67,13 +67,34 @@ Optional box art under `launcher_assets/img/` may come from
 
 ## Quick start (dev)
 
+This branch targets the Japanese Rev 1 disc (`SLPS-01010`). The expected
+Track 01 image is:
+
+- CUE: `Kaze no Klonoa - Door to Phantomile (Japan) (Rev 1).cue`
+- BIN size: `736359456` bytes
+- BIN MD5: `49ed577ac73551dd92975bc8a3fe67f2`
+- BIN SHA-1: `cda51f301f2e16e74290535cff05483b641810e1`
+
+The USA `SLUS-00585` executable, symbols, and captured overlay CRC table are
+not interchangeable with this revision. In particular, JP Rev 1 loads at
+`0x80011800`, enters at `0x80036F18`, and contains a `0xAD000`-byte text image.
+Do not copy USA overlay entries back into `game.toml`; capture JP overlays from
+the JP runtime instead.
+
 ```bash
 git submodule update --init --recursive
 ./psxrecomp/tools/ci/build_emitters.sh
 python3 psxrecomp/psxrecomp_cli.py generate \
-  --config game.toml --project-root . --disc disc/<your>.cue
+  --config game.toml --project-root . \
+  --disc "Kaze no Klonoa - Door to Phantomile (Japan) (Rev 1).cue"
 cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build-release --target psx-runtime
+```
+
+Run the version-binding regression before generation with:
+
+```bash
+python3 -m unittest -v tests/test_jp_rev1_config.py
 ```
 
 Zip prefix for CI artifacts: `kdp`.

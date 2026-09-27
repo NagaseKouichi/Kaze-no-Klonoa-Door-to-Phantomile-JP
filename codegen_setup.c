@@ -6,14 +6,14 @@
 #include "psxrecomp_codegen_host.h"
 
 static const PsxrecompCodegenHostConfig kCodegenConfig = {
-    .display_name = "Klonoa - Door to Phantomile",
+    .display_name = "Kaze no Klonoa - Door to Phantomile (Japan Rev 1)",
     .project_root_env = "KLONOA___DOOR_TO_PHANTOMILE_PROJECT_ROOT",
     .build_dir_env = "KLONOA___DOOR_TO_PHANTOMILE_BUILD_DIR",
     .force_setup_env = "KLONOA___DOOR_TO_PHANTOMILE_FORCE_SETUP",
     .psxrecomp_cli_relpath = "psxrecomp/psxrecomp_cli.py",
     .seed_cfg_relpath = "game.toml",
     .game_toml_relpath = "game.toml",
-    .gen_marker_relpath = "generated/SLUS_005.85_dispatch.c",
+    .gen_marker_relpath = "generated/SLPS_010.10_dispatch.c",
     .build_dir_name = "build-release",
     .cmake_target = "psx-runtime",
     .exe_basename = "Klonoa___Door_to_Phantomile",

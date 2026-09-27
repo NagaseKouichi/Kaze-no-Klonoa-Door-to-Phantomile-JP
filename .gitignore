@@ -1,11 +1,13 @@
 # Scaffold .gitignore for a PSXRecomp game repository (New Project Layout).
 # Aligned with docs/ci/templates/game.gitignore.
 
-# Build outputs
+# Build outputs and local toolchains
 /build/
 /build-*/
 /out/
 /.happypath/
+/.deps/
+/.tools/
 
 # Setup-host: players Generate game C locally (CI clears generated/).
 /generated/

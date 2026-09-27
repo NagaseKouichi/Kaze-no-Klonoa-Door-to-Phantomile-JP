@@ -1,40 +1,39 @@
 {
   "format_version": 1,
   "game": {
-    "name": "Klonoa - Door to Phantomile",
-    "id": "SLUS-00585",
-    "boot_exe": "SLUS_005.85"
+    "name": "Kaze no Klonoa: Door to Phantomile",
+    "id": "SLPS-01010",
+    "boot_exe": "SLPS_010.10"
   },
   "marketing": {
-    "description": "Klonoa: Door to Phantomile is a side-scrolling platform game viewed from a \"2.5D\" perspective. The player moves the protagonist, Klonoa, along a path in a two-dimensional fashion, but the game is rendered in three dimensions. This allows the path followed to curve and for the player to interact with objects outside of the path.",
+    "description": "Japanese Rev 1 static recompilation of Kaze no Klonoa: Door to Phantomile.",
     "publisher": "Namco",
     "year": "1997",
-    "region": "USA",
+    "region": "Japan",
     "players": 1
   },
   "rom_identity": {
-    "cue_name": "Klonoa - Door to Phantomile (USA).cue",
-    "bin_name": "Klonoa - Door to Phantomile (USA).bin",
+    "cue_name": "Kaze no Klonoa - Door to Phantomile (Japan) (Rev 1).cue",
+    "bin_name": "Kaze no Klonoa - Door to Phantomile (Japan) (Rev 1).bin",
     "track_counts": [
       1
     ],
     "require_cue": true,
     "data_track": {
-      "size": 736197168,
-      "md5": "ecb502ce253246899d23db80847c56dc",
-      "sha1": "cb2dc62789092d8b480971427f9c85815e815dce",
-      "crc32": "77e279e8"
+      "size": 736359456,
+      "md5": "49ed577ac73551dd92975bc8a3fe67f2",
+      "sha1": "cda51f301f2e16e74290535cff05483b641810e1"
     },
-    "disc_fp": "4e792f4e74b99a409b1d1b837709a47c541ea00ac1a5c991b66e0a321a3df79b"
+    "disc_fp": "61f390c189f9b6dbcbbfad502045787386247e0464fcac5e6bfeddb07bda6517"
   },
   "exe": {
-    "load_address": "0x80180000",
-    "entry_pc": "0x80180C18",
-    "text_size": "0x0000B000",
+    "load_address": "0x80011800",
+    "entry_pc": "0x80036F18",
+    "text_size": "0x000AD000",
     "stack_base": "0x801FFFF0"
   },
   "seeds": {
-    "count": 110,
+    "count": 978,
     "source": "boot_exe_jal"
   },
   "warnings": [
