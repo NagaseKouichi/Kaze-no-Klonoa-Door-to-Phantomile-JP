@@ -8,8 +8,11 @@
 /.happypath/
 /.deps/
 /.tools/
+/.hermes/
+/toolchain/
 
-# Setup-host: players Generate game C locally (CI clears generated/).
+# Japan Rev 1 generated C remains local: it is regenerated from the user's
+# legally owned disc and must not be committed with source.
 /generated/
 
 # Release packaging
